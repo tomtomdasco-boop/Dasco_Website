@@ -1,0 +1,913 @@
+/* MAIN PAGE DESIGN */
+
+#welcome{
+    background-image: url(https://wallpaperaccess.com/full/1609167.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 15%;
+   
+}
+
+
+
+.logo img{
+    width: 120px;
+    height: 120px;
+    border-radius: 40px;
+    mix-blend-mode: lighten;
+    margin-left: 5%;
+   
+}
+
+
+.navbar{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+
+}
+
+.nav-links{
+    list-style: none;
+
+}
+.nav-links li{
+    display: inline-block;
+    margin-right:35px ;
+    font-family: Times New Roman;
+}
+.nav-links li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 10px;
+   
+}
+
+.nav-links li a:hover{
+   -webkit-animation-fill-mode:backwards;
+    background-color: green;
+    border-radius: 20px;
+    padding: 10px;
+    transition: 0.5s ease-out;
+}
+
+.Main{
+    text-align: center;
+}
+
+.Main h1{
+    margin-top: 8%;
+    font-size: 140px;
+    color: #fff;
+    font-weight: 500;
+    font-family: fantasy;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#about{
+    padding-top: 5%;
+    padding-bottom: 14%;
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    background-color:darkgreen;
+    background-size: cover;
+}
+
+
+.profilepic img{
+    margin-top: 11%;
+    margin-right: 30px;
+    width: 450px;
+    height: 450px;
+    float: right;
+    border-radius: 15px;
+    margin-right: 150px;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0%;
+     mask: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-mask: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-position: center;
+  -webkit-mask-position: center;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+   
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.6;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+#name{
+    margin-top: 6%;
+    margin-left:5%;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0%;
+}
+
+#job{
+    margin-top: 10%;
+    font-size: 50px;
+   font-family: fantasy;
+    color: Yellow;
+   
+}
+#firstname{
+    font-size: 85px;
+    font-family: Fantasy;
+    color: #fff;
+}
+#secondname{
+    font-size: 85px;
+    font-family: fantasy;
+    color: #fff;
+}
+#lastname{
+    font-size: 85px;
+    font-family:Fantasy;
+    color:#fff;
+}
+
+#iconic{
+    position: fixed;
+    top: 30%;
+    right: 16px;
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.icons a{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    color: green;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    
+}
+
+.icons a:hover{
+  -webkit-animation-fill-mode: forwards;
+   background-color: black;
+   transition: 0.5s ease-in-out;
+
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.6;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+#picbody{
+    padding-top: 7%;
+    padding-bottom: 7%;
+    background-color: black;
+    background-size: cover;
+}
+.pictures{
+    margin: 100px 0 0 200px;
+    width: 70%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+.pictures h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 90px;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0%;
+}
+
+.pictures img{
+    width: 15%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.684);
+    transition: all ease-in-out 0.5s;
+    margin-bottom: 10%;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0%;
+}
+ .pictures img:hover{
+    width: 25%;
+    height: 100%;
+ }
+ 
+ @media (max-width: 1180px) {
+
+    .Main h1 {
+        font-size: 80px;
+    }
+
+    .profilepic img {
+        width: 350px;
+        height: 350px;
+        margin-right: 50px;
+    }
+
+    #firstname,
+    #secondname,
+    #lastname {
+        font-size: 60px;
+    }
+
+    #job {
+        font-size: 35px;
+    }
+
+    .pictures {
+        margin: 70px auto;
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    #about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profilepic img {
+        margin: 40px 0;
+        float: none;
+    }
+
+    #name {
+        margin-left: 0;
+    }
+
+    #iconic {
+        position: static;
+        margin: 30px 0;
+    }
+
+    .icons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .Main h1 {
+        font-size: 60px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .Main h1 {
+        font-size: 40px;
+        margin-top: 15%;
+    }
+
+    #job {
+        font-size: 28px;
+    }
+
+    #firstname,
+    #secondname,
+    #lastname {
+        font-size: 40px;
+    }
+
+    .profilepic img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .pictures {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 15px;
+    }
+
+    .pictures h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .pictures img {
+        width: 90%;
+        height: auto;
+    }
+
+    .pictures img:hover {
+        width: 95%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .Main h1 {
+        font-size: 28px;
+    }
+
+    #firstname,
+    #secondname,
+    #lastname {
+        font-size: 30px;
+    }
+
+    #job {
+        font-size: 20px;
+    }
+
+}
+
+/* LOGIN DESIGN */
+
+
+#wholebody{
+    background-image: url(https://static.vecteezy.com/system/resources/previews/016/588/365/non_2x/abstract-dark-background-design-free-vector.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+   
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.login{
+    background-color:transparent;
+    position: relative;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+ 
+.inputbox h3{
+    text-align: center;
+   color: #fff;
+   font-size: 35px;
+}
+
+.inputbox{
+    width: 310px;
+    margin: 30px 0;
+   
+}
+
+.email{
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border-bottom:2px solid #fff;
+}
+
+.password{
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom:2px solid #fff;
+}
+
+.email label{
+   position: absolute;
+   top: 50%;
+   left: 5px;
+   transform: translateY(-50%);
+   font-size: 17px;
+   color: #fff;
+   pointer-events: none;
+   transition: 0.5s;
+}
+
+.inputbox input:focus~label,
+.inputbox input:valid~label{
+    top: -7px;
+}
+
+.password label{
+   position: absolute;
+   top: 50%;
+   left: 5px;
+   transform: translateY(-50%);
+   font-size: 17px;
+   color: #fff;
+   pointer-events: none;
+   transition: 0.5s;
+}
+
+.email input{
+    width: 100%;
+    height:20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px ;
+    color: #fff;
+   
+}
+
+.password input{
+    width: 100%;
+    height:20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px ;
+    color: #fff;
+   
+}
+
+
+ #submit button{
+width: 100%;
+height: 35px;
+background: #fff;
+border: none;
+outline: none;
+border-radius: 35px;
+cursor: pointer;
+font-size: 20px;
+color:Black;
+font-weight: 500;
+}
+
+#submit button:hover{
+    -webkit-animation-delay: 0.5s;
+    transition: 0.5s;
+    background-color: yellow;
+   
+}
+a{
+    margin-top: 5%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    list-style: none;
+    text-decoration: overline;
+    color: #fff;
+    font-size: 20px;
+}
+
+#noacc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+#noacc p{
+   text-align: center;
+   font-size: 17px;
+   color: #fff;
+}
+
+#noacc a{
+    margin-bottom: 4%;
+    margin-left: 2%;
+    text-decoration: none;
+    font-size: 18px;
+    color: red;
+ 
+}
+
+@media (max-width:360px){
+.login{
+    width: 100%;
+    height: 100vh;
+    border: none;
+    border-radius: 0;
+}
+}
+
+/* Registration form */
+
+#regbody{
+    background-image: url(https://static.vecteezy.com/system/resources/previews/016/588/365/non_2x/abstract-dark-background-design-free-vector.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+   
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.register{
+    background-color:transparent;
+    position: relative;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    margin-left: 10%;
+    width: 470px;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+}
+#registerForm input:focus~label,
+#registerForm input:valid~label{
+    top: -8px;
+}
+
+.register:hover {
+  box-shadow: 0 8px 12px rgba(0, 4, 0, 0.3);
+}
+ 
+.register h3{
+    text-align: center;
+   color: #fff;
+   font-size: 35px;
+}
+
+.registerbox{
+    width: 310px;
+    margin: 30px 0;
+   
+}
+
+.firstname{
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border-bottom:2px solid #fff;
+}
+
+.middlename{
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom:2px solid #fff;
+}
+
+.lastname{
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom:2px solid #fff;
+}
+
+.EMAIL{
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom:2px solid #fff;
+}
+
+.PASSWORD{
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom:2px solid #fff;
+}
+
+.passwordagain{
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom:2px solid #fff;
+}
+
+.firstname label{
+   position: absolute;
+   top: 50%;
+   left: 5px;
+   transform: translateY(-50%);
+   font-size: 17px;
+   color: #fff;
+   pointer-events: none;
+   transition: 0.5s;
+}
+
+.middlename label{
+   position: absolute;
+   top: 50%;
+   left: 5px;
+   transform: translateY(-50%);
+   font-size: 17px;
+   font-weight: 400;
+   color: #fff;
+   pointer-events: none;
+   transition: 0.5s;
+}
+
+.lastname label{
+   position: absolute;
+   top: 50%;
+   left: 5px;
+   transform: translateY(-50%);
+   font-size: 17px;
+   color: #fff;
+   pointer-events: none;
+   transition: 0.5s;
+}
+
+.EMAIL label{
+   position: absolute;
+   top: 50%;
+   left: 5px;
+   transform: translateY(-50%);
+   font-size: 17px;
+   color: #fff;
+   pointer-events: none;
+   transition: 0.5s;
+}
+
+.PASSWORD label{
+   position: absolute;
+   top: 50%;
+   left: 5px;
+   transform: translateY(-50%);
+   font-size: 17px;
+   color: #fff;
+   pointer-events: none;
+   transition: 0.5s;
+}
+
+.passwordagain label{
+   position: absolute;
+   top: 50%;
+   left: 5px;
+   transform: translateY(-50%);
+   font-size: 17px;
+   color: #fff;
+   pointer-events: none;
+   transition: 0.5s;
+}
+
+.firstname input{
+    width: 100%;
+    height:20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px ;
+    color: #fff;
+   
+}
+
+.middlename input{
+    width: 100%;
+    height:20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px ;
+    color: #fff;
+   
+}
+
+.lastname input{
+    width: 100%;
+    height:20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px ;
+    color: #fff;
+}
+
+.EMAIL input{
+    width: 100%;
+    height:20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px ;
+    color: #fff;
+   
+}
+.PASSWORD input{
+    width: 100%;
+    height:20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px ;
+    color: #fff;
+}
+
+.passwordagain input{
+    width: 100%;
+    height:20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px ;
+    color: #fff;
+   
+}
+
+button{
+width: 100%;
+height: 35px;
+background: #fff;
+border: none;
+outline: none;
+border-radius: 35px;
+cursor: pointer;
+font-size: 20px;
+color:Black;
+font-weight: 500;
+}
+
+button:hover{
+    -webkit-animation-delay: 0.5s;
+    transition: 0.5s;
+    background-color: yellow;
+   
+}
+
+a{
+    margin-top: 5%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    list-style: none;
+    text-decoration: overline;
+    color: #fff;
+    font-size: 20px;
+}
+
+#storedDataSide{
+   background-color:transparent;
+   margin-right: 10%;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    width: 470px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+#storedDataSide h3{
+    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#storedDataList em{
+    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.data-item{
+    margin-top: 10%;
+    gap: 20px;
+    margin-left: 28%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media (max-width: 900px) {
+
+    #regbody {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0;
+    }
+
+    .register {
+        margin-left: 0;
+        width: 90%;
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    #storedDataSide {
+        margin-right: 0;
+        width: 90%;
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .register {
+        width: 95%;
+        padding: 20px;
+        border-radius:0;
+        border: none;
+    }
+
+    #storedDataSide {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .register h3 {
+        font-size: 26px;
+    }
+
+    button {
+        height: 45px;
+        font-size: 18px;
+    }
+
+}
