@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="icon" href="images/1001173214.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<title>Sign up</title>
+</head>
+<body>
+    <div id="regbody">
+        <div class="register">
+            <div class="registerbox">
+                <h3>Register</h3>
+                <form id="registerForm">
+                    <div class="firstname">
+                        <input type="text" id="firstName" required>
+                        <label for="firstName">First Name</label>
+                        <br>
+                    </div>
+                    <div class="middlename">
+                        <input type="text" id="middleName" required>
+                         <label for="middleName">Middle Name</label>
+                        <br>
+                    </div>
+                    <div class="lastname">
+                        <input type="text" id="lastName" required>
+                            <label for="lastName">Last Name</label>
+                        <br>
+                    </div>
+                    <div class="EMAIL">
+                        <input type="email" id="email" required>
+                         <label for="EMAIL">Email</label>
+                        <br>
+                    </div>
+                    <div class="PASSWORD">
+                        <input type="password" id="password" required>
+                         <label for="PASSWORD">Password</label>
+                        <br>
+                    </div>
+                    <div class="passwordagain">
+                        <input type="password" id="passwordAgain" required>
+                        <label for="passwordAgain">Password Again</label>
+                        <br>
+                    </div>
+                    <button type="submit">Submit</button>
+                    <div id="output" style="margin-top: 20px; display: none;"></div>
+                    <a href="index.html">Home</a>
+                </form>
+            </div>
+        </div>
+    
+    <div id="storedDataSide">
+        <h3>Stored Registration Information</h3>
+        <div id="storedDataList">
+            <em>No data stored yet.</em>
+        </div>
+    </div>
+    </div>
+    </body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+ <script>
+
+var registerForm = document.getElementById("registerForm");
+var fnameinput = document.getElementById("firstName");
+var mnameinput= document.getElementById("middleName");
+var lnameinput = document.getElementById("lastName");
+var emailinput = document.getElementById("email");
+var passwordinput = document.getElementById("password");
+var passwordagaininput = document.getElementById("passwordAgain");
+var outputout = document.getElementById("output");
+var storedDataList = document.getElementById("storedDataList"); 
+var registeredusers = [];
+
+const displayUtil = {
+
+    updateStoredDataDisplayMethod: function() {
+        if (!storedDataList) { 
+            console.error("Error: 'storedDataList' element not found for displayUtil.");
+            return;
+        }
+
+        storedDataList.style.overflowY = "auto";
+        storedDataList.style.maxHeight = "300px";
+
+        if (registeredusers.length === 0) {
+            storedDataList.innerHTML = '<em>No data stored yet.</em>';
+            return;
+        }
+
+        var htmlContent = "";
+        for (var i = 0; i < registeredusers.length; i++) { 
+            var user = registeredusers[i];
+            htmlContent += `
+                <div class="data-item">
+                    <strong>Password:</strong> ${user.password}<br>
+                    <strong>Name:</strong> ${user.fullname}<br>
+                    <strong>Email:</strong> ${user.email}
+                </div>
+            `;
+        }
+        storedDataList.innerHTML = htmlContent;
+    }
+};
+displayUtil.updateStoredDataDisplayMethod();
+registerForm.addEventListener('submit',function(e){
+    e.preventDefault();
+
+    var fname = fnameinput.value;
+    var mname = mameinput.value;
+    var lname = lnameinput.value;
+    var email = emailinput.value;
+    var password = passwordinput.value;
+    var passwordagain = passwordagaininput.value;
+
+    if (fname =="" || mname =="" || lname== "" || email =="" ||password=="" || passwordagain==""){
+        Swal.fire({
+            icon:'error',
+            title:'NOOOO',
+            text: 'Please give the Required ',
+            background: 'rgba(0,0,0,8)',
+            color: '#fff',
+            confirmedButtonColor: '#fff',
+            confirmedButtonText:'Got it'
+        });
+        return;
+    }
+
+    if (password != passwordagain){
+        Swal.fire({
+            icon:'error',
+            title:'Password Mismatch',
+            text: 'Password don\'t match',
+            background: 'rgba(0,0,0,8)',
+            color: '#fff',
+            confirmedButtonColor: '#fff',
+            confirmedButtonText:'Please try again'
+        });
+        return;
+    }
+    var userdata = {
+        fullname: fname + ""+ mname +"" +lname,
+        email:email,
+        password:password
+    };
+
+    registeredusers.push(userdata); 
+
+    Swal.fire({
+        icon:'success',
+        title:'Registration Successful',
+        html: `<strong>Name:</strong> ${userdata.fullname}<br><strong>Email:</strong> ${userdata.email}`, // Corrected html property and content
+        text: 'Registration Succesful',
+        background: 'rgba(0,0,0,8)',
+        color: '#fff',
+        confirmedButtonColor: 'green',
+        confirmedButtonText:'Great!'
+    });
+    registerForm.reset();
+    outputout.style.display = 'none';
+
+    displayUtil.updateStoredDataDisplayMethod();
+});
+
+    </script>
+
+
